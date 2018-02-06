@@ -16,6 +16,12 @@ button = aiy.voicehat.get_button()
 
 preview_mode = False
 
+app = App(title="Camera")
+
+img = ImageTk.PhotoImage(Image.open('test.jpg'))
+preview = Text(app, text="Preview")
+preview.tk.config(image = img)
+
 
 def button_take_photo():
     global preview_mode
@@ -25,17 +31,15 @@ def button_take_photo():
         camera.capture('test.jpg')
         led.set_state(aiy.voicehat.LED.PULSE_SLOW)
         camera.stop_preview()
+        img = ImageTk.PhotoImage(Image.open('test.jpg'))
+        preview.tk.config(image = img)
         preview_mode = False
     else:
         camera.start_preview()
         preview_mode = True
 
 
-app = App(title="Camera")
 
-img = ImageTk.PhotoImage(Image.open('test.jpg'))
-preview = Text(app, text="Preview")
-preview.tk.config(image = img)
 
 camera = picamera.PiCamera()
 try:
