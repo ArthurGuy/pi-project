@@ -34,6 +34,7 @@ def button_take_photo():
         time.sleep(2)
         img = ImageTk.PhotoImage(Image.open('test.jpg'))
         preview.tk.config(image = img)
+        preview.image = img
         preview_mode = False
     else:
         camera.start_preview()
