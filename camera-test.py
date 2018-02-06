@@ -26,7 +26,7 @@ app = App(title="Camera")
 
 img = ImageTk.PhotoImage(Image.open('test.jpg'))
 preview = Text(app, text="Preview")
-panel = preview.tk.Label(none, image = img)
+panel = preview.tk.image = img
 
 camera = picamera.PiCamera()
 try:
