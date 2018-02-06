@@ -4,6 +4,9 @@ import RPi.GPIO as GPIO
 import aiy.voicehat
 from guizero import App, Text, Picture
 
+import Image
+import Tkinter
+
 # export DISPLAY=:0.0
 
 #Ignore warnings about redefining the GPIO port
@@ -21,6 +24,9 @@ def button_take_photo():
 
 
 app = App(title="Camera")
+
+imageFile = "test.jpg"
+app.im1 = Image.open(imageFile)
 
 camera = picamera.PiCamera()
 try:
