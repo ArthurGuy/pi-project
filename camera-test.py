@@ -13,7 +13,7 @@ led = aiy.voicehat.get_led()
 button = aiy.voicehat.get_button()
 
 
-def button_take_photo(_):
+def button_take_photo():
     led.set_state(aiy.voicehat.LED.BLINK_3)
     time.sleep(2)
     camera.capture('test.jpg')
