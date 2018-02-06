@@ -14,13 +14,20 @@ GPIO.setwarnings(False)
 led = aiy.voicehat.get_led()
 button = aiy.voicehat.get_button()
 
+preview_mode = 0
+
 
 def button_take_photo():
-    led.set_state(aiy.voicehat.LED.BLINK_3)
-    time.sleep(2)
-    camera.capture('test.jpg')
-    led.set_state(aiy.voicehat.LED.PULSE_SLOW)
-    camera.stop_preview()
+    if preview_mode == 1
+        led.set_state(aiy.voicehat.LED.BLINK_3)
+        time.sleep(2)
+        camera.capture('test.jpg')
+        led.set_state(aiy.voicehat.LED.PULSE_SLOW)
+        camera.stop_preview()
+        preview_mode = 0
+    else 
+        camera.start_preview()
+        preview_mode = 1
 
 
 app = App(title="Camera")
@@ -31,7 +38,7 @@ preview.tk.config(image = img)
 
 camera = picamera.PiCamera()
 try:
-    camera.start_preview()
+    
     led.set_state(aiy.voicehat.LED.PULSE_SLOW)
     
     welcome_message = Text(app, text="Photo booth")
