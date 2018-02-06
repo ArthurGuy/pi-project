@@ -14,20 +14,20 @@ GPIO.setwarnings(False)
 led = aiy.voicehat.get_led()
 button = aiy.voicehat.get_button()
 
-preview_mode = 0
+preview_mode = False
 
 
 def button_take_photo():
-    if preview_mode == 1
+    if preview_mode == True:
         led.set_state(aiy.voicehat.LED.BLINK_3)
         time.sleep(2)
         camera.capture('test.jpg')
         led.set_state(aiy.voicehat.LED.PULSE_SLOW)
         camera.stop_preview()
-        preview_mode = 0
-    else 
+        preview_mode = False
+    else:
         camera.start_preview()
-        preview_mode = 1
+        preview_mode = True
 
 
 app = App(title="Camera")
