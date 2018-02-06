@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import aiy.voicehat
 import aiy._drivers._led
 
 # GPIO definitions (BCM)
