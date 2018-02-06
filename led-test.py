@@ -13,4 +13,4 @@ LED = aiy._drivers._led.LED
 _voicehat_led = aiy._drivers._led.LED(channel=_GPIO_LED)
 _voicehat_led.start()
 
-led.set_state(aiy.voicehat.LED.BLINK)
+_voicehat_led.set_state(aiy.voicehat.LED.BLINK)
