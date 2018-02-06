@@ -16,4 +16,4 @@ pin = 26
 humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
 if humidity is not None and temperature is not None:
-  audio.say('The temperature is {0:0.1f} degrees and the humidity is {1:f}%'.format(temperature, trunc(humidity)), lang="en-GB", volume=75, pitch=135)
+  audio.say('The temperature is {0:0.1f} degrees and the humidity is {1}%'.format(temperature, trunc(humidity)), lang="en-GB", volume=75, pitch=135)
