@@ -46,7 +46,6 @@ try:
     #camera.capture('test.jpg')
     
     #camera.stop_preview()
-    photo.image = 'test.jpg'
     
     app.display()
     
