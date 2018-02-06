@@ -12,8 +12,10 @@ button = aiy.voicehat.get_button()
 camera = picamera.PiCamera()
 try:
     camera.start_preview()
-    led.set_state(aiy.voicehat.LED.PULSE_QUICK)
+    led.set_state(aiy.voicehat.LED.PULSE_SLOW)
     button.wait_for_press()
+    led.set_state(aiy.voicehat.LED.BLINK_3)
+    time.sleep(2)
     camera.capture('test.jpg')
     camera.stop_preview()
 finally:
