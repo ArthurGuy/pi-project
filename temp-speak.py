@@ -1,3 +1,4 @@
+from math import trunc
 import RPi.GPIO as GPIO
 import aiy.voicehat
 
