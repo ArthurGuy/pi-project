@@ -3,6 +3,9 @@
 import RPi.GPIO as GPIO
 import aiy.voicehat
 
+#Ignore warnings about redefining the GPIO port
+GPIO.setwarnings(False)
+
 led = aiy.voicehat.get_led()
 button = aiy.voicehat.get_button()
 
