@@ -28,6 +28,7 @@ def button_take_photo():
     if preview_mode == True:
         led.set_state(aiy.voicehat.LED.BLINK_3)
         time.sleep(2)
+        camera.rotation = 180
         camera.resolution = (1024, 768)
         camera.capture('test.jpg')
         led.set_state(aiy.voicehat.LED.PULSE_SLOW)
