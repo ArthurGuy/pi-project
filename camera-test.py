@@ -20,6 +20,7 @@ def button_take_photo():
     time.sleep(2)
     camera.capture('test.jpg')
     led.set_state(aiy.voicehat.LED.PULSE_SLOW)
+    camera.stop_preview()
 
 
 app = App(title="Camera")
@@ -31,7 +32,7 @@ panel = preview.tk.image = img
 camera = picamera.PiCamera()
 try:
     camera.start_preview()
-    #led.set_state(aiy.voicehat.LED.PULSE_SLOW)
+    led.set_state(aiy.voicehat.LED.PULSE_SLOW)
     
     welcome_message = Text(app, text="Photo booth")
     #photo = Picture(app, image="test.jpg")
