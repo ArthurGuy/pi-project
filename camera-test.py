@@ -26,8 +26,8 @@ def button_take_photo():
 app = App(title="Camera")
 
 img = ImageTk.PhotoImage(Image.open('test.jpg'))
-preview = Text(app, text="Preview")
-panel = preview.tk.image = img
+preview = Text(app, text="Preview", image=img)
+preview.tk.image = img
 
 camera = picamera.PiCamera()
 try:
