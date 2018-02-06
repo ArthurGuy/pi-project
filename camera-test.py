@@ -4,8 +4,7 @@ import RPi.GPIO as GPIO
 import aiy.voicehat
 from guizero import App, Text, Picture
 
-import Image
-import Tkinter
+from PIL import ImageTk, Image
 
 # export DISPLAY=:0.0
 
@@ -25,8 +24,9 @@ def button_take_photo():
 
 app = App(title="Camera")
 
-imageFile = "test.jpg"
-app.im1 = Image.open(imageFile)
+img = ImageTk.PhotoImage(Image.open('test.jpg))
+preview = Text(app, text="Preview")
+panel = preview.tk.Label(none, image = img)
 
 camera = picamera.PiCamera()
 try:
@@ -34,7 +34,7 @@ try:
     #led.set_state(aiy.voicehat.LED.PULSE_SLOW)
     
     welcome_message = Text(app, text="Photo booth")
-    photo = Picture(app, image="test.jpg")
+    #photo = Picture(app, image="test.jpg")
     
     
     button.on_press(button_take_photo)
