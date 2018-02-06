@@ -18,6 +18,7 @@ preview_mode = False
 
 
 def button_take_photo():
+    global preview_mode
     if preview_mode == True:
         led.set_state(aiy.voicehat.LED.BLINK_3)
         time.sleep(2)
