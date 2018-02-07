@@ -29,9 +29,11 @@ def button_take_photo():
     global preview_mode
     if preview_mode == True:
         led.set_state(aiy.voicehat.LED.BLINK_3)
-        countdown.append('2 ')
+        countdown.value = '3'
         time.sleep(1)
-        countdown.append('1')
+        countdown.value = '2'
+        time.sleep(1)
+        countdown.value = '1'
         time.sleep(1)
         
         camera.stop_preview()
