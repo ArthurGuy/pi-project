@@ -45,6 +45,9 @@ def button_take_photo():
 
 camera = picamera.PiCamera()
 camera.rotation = 180
+camera.preview_fullscreen = False
+camera.resolution = (1920, 1080)
+
 try:
     
     led.set_state(aiy.voicehat.LED.PULSE_SLOW)
