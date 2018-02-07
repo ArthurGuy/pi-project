@@ -38,7 +38,7 @@ def button_take_photo():
         preview_mode = False
     else:
         camera.start_preview()
-        camera.preview.window = (96, 128, 576, 768)
+        camera.preview.window = (128, 96, 768, 576)
         preview_mode = True
 
 
