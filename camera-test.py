@@ -39,6 +39,7 @@ def button_take_photo():
     else:
         camera.start_preview()
         camera.preview.window = (128, 96, 768, 576)
+        camera.resolution = (768, 576)
         preview_mode = True
 
 
@@ -47,7 +48,7 @@ def button_take_photo():
 camera = picamera.PiCamera()
 camera.rotation = 180
 camera.preview_fullscreen = False
-camera.resolution = (1920, 1080)
+
 
 try:
     
