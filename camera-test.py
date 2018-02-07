@@ -43,6 +43,11 @@ def button_take_photo():
         camera.resolution = (640, 360)
         camera.start_preview()
         camera.preview.window = (192, 100, 640, 360)
+        
+        img = ImageTk.PhotoImage(Image.open('background.jpg'))
+        preview.tk.config(image = img)
+        preview.image = img
+        
         preview_mode = True
 
 
