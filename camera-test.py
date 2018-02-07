@@ -18,6 +18,8 @@ preview_mode = False
 
 app = App(title="Camera", height=768, width=1024)
 
+countdown = Text(app, text="Countdown")
+
 img = ImageTk.PhotoImage(Image.open('test.jpg'))
 preview = Text(app, text="Preview")
 preview.tk.config(image = img)
@@ -27,6 +29,8 @@ def button_take_photo():
     global preview_mode
     if preview_mode == True:
         led.set_state(aiy.voicehat.LED.BLINK_3)
+        countdown.text = 'Photo in 3, 2, 1'
+        
         time.sleep(2)
         
         camera.stop_preview()
