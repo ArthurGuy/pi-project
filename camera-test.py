@@ -28,13 +28,16 @@ def button_take_photo():
     if preview_mode == True:
         led.set_state(aiy.voicehat.LED.BLINK_3)
         time.sleep(2)
-        camera.resolution = (1024, 768)
+        
+        camera.stop_preview()
+        camera.resolution = (1280, 720)
         camera.capture('test.jpg')
         led.set_state(aiy.voicehat.LED.PULSE_SLOW)
-        camera.stop_preview()
+        
         img = ImageTk.PhotoImage(Image.open('test.jpg'))
         preview.tk.config(image = img)
         preview.image = img
+        
         preview_mode = False
     else:
         camera.resolution = (640, 360)
