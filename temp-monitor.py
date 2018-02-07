@@ -7,7 +7,7 @@ sensor = Adafruit_DHT.DHT22
 pin = 26
 
 fan_pin = 4
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(fan_pin, GPIO.OUT)
 
 GPIO.output(fan_pin, True)
