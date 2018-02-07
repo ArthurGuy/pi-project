@@ -34,7 +34,7 @@ def button_take_photo():
         camera.capture('test.jpg')
         led.set_state(aiy.voicehat.LED.PULSE_SLOW)
         
-        img = ImageTk.PhotoImage(Image.open('test.jpg').resize((300, 300)))
+        img = ImageTk.PhotoImage(Image.open('test.jpg').resize((640, 360)))
         preview.tk.config(image = img)
         preview.image = img
         
