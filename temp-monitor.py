@@ -24,7 +24,7 @@ try:
         else:
             print('Failed to get reading.')
 
-        if temperature is not None
+        if temperature is not None:
             if temperature > max_temp:
                 GPIO.output(fan_pin, True)
             elif temperature < (max_temp - 1):
