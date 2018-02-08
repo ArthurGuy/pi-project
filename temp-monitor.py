@@ -6,6 +6,7 @@ import time
 
 sensor = Adafruit_DHT.DHT22
 pin = 26
+max_temp = 20
 
 fan_pin = 4
 GPIO.setmode(GPIO.BCM)
@@ -20,9 +21,9 @@ while True:
     else:
         print('Failed to get reading. Try again!')
 
-    if temperature > 20:
+    if temperature > max_temp:
         GPIO.output(fan_pin, True)
-    else:
+    elif temperature < (max_temp - 1):
         GPIO.output(fan_pin, False) 
 
     time.sleep(15)
