@@ -7,7 +7,7 @@ import time
 sensor_pin = 26
 fan_pin = 4
 
-max_temp = 20
+max_temp = 25
 
 sensor = Adafruit_DHT.DHT22
 
