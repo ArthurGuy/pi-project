@@ -13,7 +13,8 @@ button = aiy.voicehat.get_button()
 
 
 
-try:
+while True:
+    
     camera = picamera.PiCamera()
     camera.rotation = 0
     camera.preview_fullscreen = False
