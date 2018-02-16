@@ -65,7 +65,7 @@ def button_take_photo():
 
 
 camera = picamera.PiCamera()
-camera.rotation = 180
+camera.rotation = 0
 camera.preview_fullscreen = False
 
 
