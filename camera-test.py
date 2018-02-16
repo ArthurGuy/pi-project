@@ -23,5 +23,5 @@ while True:
     camera.start_preview()
     camera.preview.window = (192, 100, 640, 360)
     
-finally:
-    camera.close()
+
+camera.close()
