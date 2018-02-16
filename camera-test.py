@@ -11,7 +11,12 @@ camera.resolution = (640, 360)
 camera.start_preview()
 camera.preview.window = (192, 100, 640, 360)
 
-while True:
+try:
+    while True:
+        time.sleep(15)
+        
+except KeyboardInterrupt:
+    camera.close()
+    print('Exiting')
     
 
-camera.close()
